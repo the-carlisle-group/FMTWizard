@@ -1,0 +1,5 @@
+ Build←{
+     d←A.NewDocument''
+     d
+
+ }
