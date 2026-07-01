@@ -1,0 +1,9 @@
+ BTNChange←{
+     ⎕←'Button Clicked!'
+     d←⍵.Document
+     b←⍵.Target
+     b.Count+←1
+     p←d A.GetElementById'click-status'
+     p A.SetInnerHTML⍕'Click Status: 'b.Count
+
+ }

@@ -1,0 +1,24 @@
+ Response←{
+     ⎕←'You clicked the '⍵.Component.Label'button'
+     d←⍵.Document
+     j←''
+     R←d A.GetComponentValues 0
+
+     S←()⎕VSET R
+     j←(⍕S.Columnwidth),j
+     j←(S.Decimals≠0/('I'),j,(S.Decimals≠0/('.',⍕S.Decimals))
+
+     j←(S.Decimals=0/'F'),j
+
+
+
+
+     j←(S.CommaBox/'C'),j
+     j←(S.LeftJustifyBox/'L'),j
+     j←(S.BlankZeroBox/'B'),j
+     j←(S.ExponentBox/'E11.5'),j
+     ⎕←j ⎕FMT 123456
+
+
+     0
+ }

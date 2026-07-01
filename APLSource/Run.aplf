@@ -1,0 +1,7 @@
+ Run←{
+     a←A.NewApplication 0
+     a.Name←'Wiz'
+     a.OnBuild←'#.FMTWizard.Build'
+     d←a A.StartDesktopApplication 0
+     d
+ }

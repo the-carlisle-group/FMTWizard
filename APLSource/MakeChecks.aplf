@@ -1,0 +1,27 @@
+ MakeChecks←{
+     c←'LeftJustifyBox'A.CheckBox.New'Left justify'
+     c.OnChange←A.FQP'Response'
+     e←'CommaBox'A.CheckBox.New'Commas'
+     e.OnChange←A.FQP'Response'
+     f←'BlankZeroBox'A.CheckBox.New'Blanks as Zeros'
+     f.OnChange←A.FQP'Response'
+     z←'ExponentBox'A.CheckBox.New'Exponent'
+     z.OnChange←A.FQP'Response'
+     b←A.FieldSet.New('Border' 1)('Content'(c e f z))('Format' 'stacked')('Legend' 'Options')
+
+     g←'Decimals'A.NumberInput.New(⊂'Label' 'Decimal places')
+     g.OnChange←A.FQP'Response'
+     h←'Columnwidth'A.NumberInput.New('Label' 'Column width')('Value' 20)
+     h.OnChange←A.FQP'Response'
+     i←A.FieldSet.New('Border' 1)('Content'(g h))('Format' 'stacked')('Legend' 'Basic format instructions')
+
+
+
+     j←'RadioGroup'A.RadioGroup.New('Options'('One' 'Two' 'Three'))('Labels'('A' 'B' 'C'))('Legend' 'HelloWorld')
+     k←'TextArea'A.TextArea.New('Label' 'The text area')('Options' 'ABC')
+
+
+     d←A.NewDocument b,i,j,k
+     d
+
+ }

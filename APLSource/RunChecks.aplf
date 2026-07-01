@@ -1,0 +1,8 @@
+ RunChecks←{
+     z←#.Abacus.Main.Init 0
+     a←A.NewApplication 0
+     a.Name←'Wiz'
+     a.OnBuild←'#.FMTWizard.MakeChecks'
+     d←a A.StartDesktopApplication 0
+     d
+ }

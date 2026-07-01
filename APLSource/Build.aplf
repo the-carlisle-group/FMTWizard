@@ -1,5 +1,12 @@
  Build←{
-     d←A.NewDocument''
+
+     bn←A.New'button' 'Hey'
+     bn.OnClick←A.FQP'BTNChange'
+     bn.Count←0
+     p←A.New'p' 'Click Status: 0'
+     p.id←'click-status'
+
+     d←A.NewDocument bn,p
      d
 
  }
