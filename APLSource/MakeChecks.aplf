@@ -5,7 +5,7 @@
      e.OnChange←A.FQP'Response'
      f←'BlankZeroBox'A.CheckBox.New'Blanks as Zeros'
      f.OnChange←A.FQP'Response'
-     z←'ExponentBox'A.CheckBox.New'Exponent'
+     z←'ZeroFill'A.CheckBox.New'Zero fill'
      z.OnChange←A.FQP'Response'
      b←A.FieldSet.New('Border' 1)('Content'(c e f z))('Format' 'stacked')('Legend' 'Options')
 
@@ -13,15 +13,29 @@
      g.OnChange←A.FQP'Response'
      h←'Columnwidth'A.NumberInput.New('Label' 'Column width')('Value' 20)
      h.OnChange←A.FQP'Response'
-     i←A.FieldSet.New('Border' 1)('Content'(g h))('Format' 'stacked')('Legend' 'Basic format instructions')
+     l←'Scale'A.NumberInput.New(⊂'Label' 'Scale (move decimal)')
+     l.OnChange←A.FQP'Response'
+     i←A.FieldSet.New('Border' 1)('Content'(g h l))('Format' 'stacked')('Legend' 'Basic format instructions')
 
+
+     m←'PositivePrefix'A.TextInput.New(⊂'Label' 'Positive prefix')
+     m.OnChange←A.FQP'Response'
+     n←'PositiveSuffix'A.TextInput.New(⊂'Label' 'Positive suffix')
+     n.OnChange←A.FQP'Response'
+     o←'NegativePrefix'A.TextInput.New(⊂'Label' 'Negative prefix')
+     o.OnChange←A.FQP'Response'
+     p←'NegativeSuffix'A.TextInput.New(⊂'Label' 'Negative suffix')
+     p.OnChange←A.FQP'Response'
+     q←'BackgroundText'A.TextInput.New(⊂'Label' 'Background text')
+     q.OnChange←A.FQP'Response'
+     r←A.FieldSet.New('Border' 1)('Content'(m n o p q))('Format' 'stacked')('Legend' 'Decorations')
 
 
      j←'RadioGroup'A.RadioGroup.New('Options'('One' 'Two' 'Three'))('Labels'('A' 'B' 'C'))('Legend' 'HelloWorld')
      k←'TextArea'A.TextArea.New('Label' 'The text area')('Options' 'ABC')
 
 
-     d←A.NewDocument b,i,j,k
+     d←A.NewDocument b,i,r,j,k
      d
 
  }
