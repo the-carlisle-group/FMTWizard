@@ -30,12 +30,31 @@
      q.OnChange←A.FQP'Response'
      r←A.FieldSet.New('Border' 1)('Content'(m n o p q))('Format' 'stacked')('Legend' 'Decorations')
 
+     v←'DecimalPoint'A.TextInput.New('Label' 'Decimal point')('Value' '.')
+     v.OnChange←A.FQP'Response'
+     w←'TriadSeparator'A.TextInput.New('Label' 'Triad separator')('Value' ',')
+     w.OnChange←A.FQP'Response'
+     y←'ZeroFill'A.TextInput.New('Label' 'Zero fill')('Value' '0')
+     y.OnChange←A.FQP'Response'
+     aa←'OverflowFill'A.TextInput.New('Label' 'Overflow fill')('Value' '*')
+     aa.OnChange←A.FQP'Response'
+     bb←'PrecisionLoss'A.TextInput.New('Label' 'Precision loss')('Value' '_')
+     bb.OnChange←A.FQP'Response'
+     cc←A.FieldSet.New('Border' 1)('Content'(v w y aa bb))('Format' 'stacked')('Legend' 'Default characters')
 
-     j←'RadioGroup'A.RadioGroup.New('Options'('One' 'Two' 'Three'))('Labels'('A' 'B' 'C'))('Legend' 'HelloWorld')
-     k←'TextArea'A.TextArea.New('Label' 'The text area')('Options' 'ABC')
 
 
-     d←A.NewDocument b,i,r,j,k
+     u←A.New'div'('Content'(b i r cc))('id' 'myset')
+
+
+
+
+
+
+
+
+     d←A.NewDocument u
+     d.AppStyle←CSS 0
      d
 
  }

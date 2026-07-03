@@ -1,0 +1,33 @@
+ CSS←{
+     s←A.NewRule''
+     r←s A.NewRule'legend'
+     r.color←'pink'
+
+     r←s A.NewRule'input'
+     r.background_color←'pink'
+
+     r←s A.NewRule'#myset'
+     r.display←'flex'
+     r.justify_content←'space-between'
+     r.padding←'4em'
+
+
+
+
+     r←s A.NewRule'fieldset'
+     r.width←'17em'
+
+
+
+
+
+
+
+
+
+
+
+
+     s
+
+ }
