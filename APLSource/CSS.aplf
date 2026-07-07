@@ -3,19 +3,33 @@
      r←s A.NewRule'legend'
      r.color←'pink'
 
-     r←s A.NewRule'input'
-     r.background_color←'pink'
+
+
+
+
 
      r←s A.NewRule'#myset'
-     r.display←'flex'
-     r.justify_content←'space-between'
+     r.display←'grid'
+     r.grid_template_columns←'16em 16em'
+     r.margin←'auto'
+     r.gap←'1em'
      r.padding←'4em'
+
+     r←s A.NewRule'input'
+     r.width←'5em'
+
 
 
 
 
      r←s A.NewRule'fieldset'
-     r.width←'17em'
+
+     r.color←'pink'
+
+
+
+
+
 
 
 

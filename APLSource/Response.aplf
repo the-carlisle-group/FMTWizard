@@ -3,29 +3,36 @@
      d←⍵.Document
      j←''
      R←d A.GetComponentValues 0
-     x←12345
+
 
      S←()⎕VSET R
+
+     x←S.UserInput
+
+
      j←(⍕S.Columnwidth),j
 
      j←((S.Decimals≠0)⊃(('I',j)('F',j,'.',⍕S.Decimals)))
 
      j←'K',⍕S.Scale,j
 
-     j←'P','<',S.PositivePrefix,'>',j
-     j←'M','<',S.NegativePrefix,'>',j
-     j←'Q','<',S.PositiveSuffix,'>',j
-     j←'N','<',S.NegativeSuffix,'>',j
-     j←'R','<',S.BackgroundText,'>',j
+     j←((S.PositivePrefix≢'')/('P','<',S.PositivePrefix,'>')),j
+     j←((S.NegativePrefix≢'')/'M','<',S.NegativePrefix,'>'),j
+     j←((S.PositiveSuffix≢'')/'Q','<',S.PositiveSuffix,'>'),j
+     j←((S.NegativeSuffix≢'')/'N','<',S.NegativeSuffix,'>'),j
+     j←((S.BackgroundText≢'')/'R','<',S.BackgroundText,'>'),j
 
 
 
 
 
-
-
-
-
+     m←((S.Decimals≠0)∧(S.DecimalPoint≢'.'))/'.',⊃S.DecimalPoint
+     n←(S.TriadSeparator≢',')/',',⊃S.TriadSeparator
+     o←(S.ZeroFillChange≢'0')/'0',⊃S.ZeroFillChange
+     p←(S.OverflowFill≢'*')/'*',⊃S.OverflowFill
+     q←(S.PrecisionLoss≢'_')/'_',⊃S.PrecisionLoss
+     y←m,n,o,p,q
+     j←((y≢'')/'S<',y,'>'),j
 
 
 
@@ -37,6 +44,8 @@
 
 
      ⎕←j ⎕FMT x
+
+
 
 
      0

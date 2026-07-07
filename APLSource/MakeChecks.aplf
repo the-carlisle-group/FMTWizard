@@ -1,4 +1,12 @@
  MakeChecks←{
+
+     gg←'UserInput'A.NumberInput.New(⊂'Label' 'Input your number')
+     gg.OnChange←A.FQP'Response'
+
+     xx←RunChecks 0
+
+    ⍝  hh←'Result'A.New 'p' 'yo'
+
      c←'LeftJustifyBox'A.CheckBox.New'Left justify'
      c.OnChange←A.FQP'Response'
      e←'CommaBox'A.CheckBox.New'Commas'
@@ -7,7 +15,7 @@
      f.OnChange←A.FQP'Response'
      z←'ZeroFill'A.CheckBox.New'Zero fill'
      z.OnChange←A.FQP'Response'
-     b←A.FieldSet.New('Border' 1)('Content'(c e f z))('Format' 'stacked')('Legend' 'Options')
+     b←A.FieldSet.New('Border' 1)('Content'(c e f z))('Format' 'inline')('Legend' 'Options')
 
      g←'Decimals'A.NumberInput.New(⊂'Label' 'Decimal places')
      g.OnChange←A.FQP'Response'
@@ -15,7 +23,7 @@
      h.OnChange←A.FQP'Response'
      l←'Scale'A.NumberInput.New(⊂'Label' 'Scale (move decimal)')
      l.OnChange←A.FQP'Response'
-     i←A.FieldSet.New('Border' 1)('Content'(g h l))('Format' 'stacked')('Legend' 'Basic format instructions')
+     i←A.FieldSet.New('Border' 1)('Content'(g h l))('Format' 'inline')('Legend' 'Basic format instructions')
 
 
      m←'PositivePrefix'A.TextInput.New(⊂'Label' 'Positive prefix')
@@ -28,19 +36,19 @@
      p.OnChange←A.FQP'Response'
      q←'BackgroundText'A.TextInput.New(⊂'Label' 'Background text')
      q.OnChange←A.FQP'Response'
-     r←A.FieldSet.New('Border' 1)('Content'(m n o p q))('Format' 'stacked')('Legend' 'Decorations')
+     r←A.FieldSet.New('Border' 1)('Content'(m n o p q))('Format' 'inline')('Legend' 'Decorations')
 
      v←'DecimalPoint'A.TextInput.New('Label' 'Decimal point')('Value' '.')
      v.OnChange←A.FQP'Response'
      w←'TriadSeparator'A.TextInput.New('Label' 'Triad separator')('Value' ',')
      w.OnChange←A.FQP'Response'
-     y←'ZeroFill'A.TextInput.New('Label' 'Zero fill')('Value' '0')
+     y←'ZeroFillChange'A.TextInput.New('Label' 'Zero fill')('Value' '0')
      y.OnChange←A.FQP'Response'
      aa←'OverflowFill'A.TextInput.New('Label' 'Overflow fill')('Value' '*')
      aa.OnChange←A.FQP'Response'
      bb←'PrecisionLoss'A.TextInput.New('Label' 'Precision loss')('Value' '_')
      bb.OnChange←A.FQP'Response'
-     cc←A.FieldSet.New('Border' 1)('Content'(v w y aa bb))('Format' 'stacked')('Legend' 'Default characters')
+     cc←A.FieldSet.New('Border' 1)('Content'(v w y aa bb))('Format' 'inline')('Legend' 'Default characters')
 
 
 
@@ -53,7 +61,7 @@
 
 
 
-     d←A.NewDocument u
+     d←A.NewDocument gg,u
      d.AppStyle←CSS 0
      d
 
