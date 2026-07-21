@@ -1,11 +1,15 @@
  MakeChecks←{
 
-     gg←'UserInput'A.NumberInput.New(⊂'Label' 'Input your number')
+     gg←'UserInput'A.NumberInput.New'Input your Number'
      gg.OnChange←A.FQP'Response'
 
-     xx←RunChecks 0
 
-    ⍝  hh←'Result'A.New 'p' 'yo'
+
+     xx←A.New'p'(⍕0)
+
+     xx.id←'Result'
+     yy←A.New'p'
+     yy.id←'LeftArgument'
 
      c←'LeftJustifyBox'A.CheckBox.New'Left justify'
      c.OnChange←A.FQP'Response'
@@ -61,7 +65,7 @@
 
 
 
-     d←A.NewDocument gg,u
+     d←A.NewDocument gg,xx,yy,u
      d.AppStyle←CSS 0
      d
 

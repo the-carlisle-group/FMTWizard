@@ -18,6 +18,17 @@
      r←s A.NewRule'input'
      r.width←'5em'
 
+     r←s A.NewRule'#Result'
+
+     r.width←'5em'
+     r.margin_top←'1em'
+
+     r.padding←'.5em'
+     r.border_width←'.1em'
+     r.text_align←'right'
+     r.border_radius←'.45em'
+     r.border_style←'solid'
+
 
 
 
@@ -25,14 +36,6 @@
      r←s A.NewRule'fieldset'
 
      r.color←'pink'
-
-
-
-
-
-
-
-
 
 
 

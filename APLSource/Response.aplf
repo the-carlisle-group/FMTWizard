@@ -43,9 +43,13 @@
      j←(S.ZeroFill/'Z'),j
 
 
+     z←d A.GetElementById'LeftArgument'
+
+     _←z A.SetInnerHTML,j
+
      ⎕←j ⎕FMT x
-
-
+     k←d A.GetElementById'Result'
+     _←k A.SetInnerHTML,j ⎕FMT x
 
 
      0

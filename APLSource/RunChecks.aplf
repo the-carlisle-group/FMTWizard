@@ -1,4 +1,5 @@
  RunChecks←{
+     ⎕THIS.A←#.Abacus.Main
      z←#.Abacus.Main.Init 0
      a←A.NewApplication 0
      a.Name←'Wiz'
