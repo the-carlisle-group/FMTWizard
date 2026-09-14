@@ -1,0 +1,16 @@
+ BuildMainPage←{
+
+     a←'UserInput'A.NumberInput.New'Input your Number' ''
+     b←'FormatString'A.TextInput.New'Format string'
+     c←'RunButton'A.Button.New'Run'
+     c.OnClick←'#.FMTWizard.BuildFormatWiz'
+
+
+
+
+     d←A.NewDocument a b c
+     d.AppStyle←CSS 0
+     d
+
+
+ }

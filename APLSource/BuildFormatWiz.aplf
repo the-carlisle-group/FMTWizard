@@ -1,4 +1,12 @@
- MakeChecks←{
+ BuildFormatWiz←{
+     ⎕←'Button Pressed!'
+
+
+     d←⍵.Document
+     pp←()⎕VSET A.GetComponentValues d
+     ⎕←pp.FormatString
+
+
 
      gg←'UserInput'A.NumberInput.New'Input your Number'
      gg.OnChange←A.FQP'Response'
@@ -65,8 +73,18 @@
 
 
 
-     d←A.NewDocument gg,xx,yy,u
-     d.AppStyle←CSS 0
-     d
+     content←gg,xx,yy,u
+
+     db←A.DialogBox.New'FormatWizard' ''content
+     _←d A.ShowModal db
+
+     ov←()
+     ov.CommaBox←1
+     ov.LeftJustifyBox←1
+     db A.SetComponentValues ov
+
+
+
+
 
  }

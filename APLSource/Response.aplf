@@ -14,7 +14,7 @@
 
      j←((S.Decimals≠0)⊃(('I',j)('F',j,'.',⍕S.Decimals)))
 
-     j←'K',⍕S.Scale,j
+     j←((S.Scale≠0)/('K',⍕S.Scale)),j
 
      j←((S.PositivePrefix≢'')/('P','<',S.PositivePrefix,'>')),j
      j←((S.NegativePrefix≢'')/'M','<',S.NegativePrefix,'>'),j
@@ -36,11 +36,23 @@
 
 
 
-
      j←(S.CommaBox/'C'),j
      j←(S.LeftJustifyBox/'L'),j
      j←(S.BlankZeroBox/'B'),j
      j←(S.ZeroFill/'Z'),j
+
+     a←S.ReplacementValues
+     f←{⍵⊆⍨⍵≠⍺}
+     l←':'f¨';'f a
+     g←{0=≢⍵:'' ⋄ 'O',(0⊃⍵),'⎕',(1⊃⍵),'⎕'}
+     aa←∊g¨l
+     j←aa,j
+
+
+
+
+
+
 
 
      z←d A.GetElementById'LeftArgument'
