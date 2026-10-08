@@ -1,0 +1,9 @@
+ UserCallback←{
+     d←⍵.Document
+     f←'CF12.2'
+     n←1250.99
+     d #.FMTWizard.Run f n
+
+
+
+ }

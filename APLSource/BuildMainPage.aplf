@@ -3,7 +3,7 @@
      a←'UserInput'A.NumberInput.New'Input your Number' ''
      b←'FormatString'A.TextInput.New'Format string'
      c←'RunButton'A.Button.New'Run'
-     c.OnClick←'#.FMTWizard.BuildFormatWiz'
+     c.OnClick←'#.UserCallback'
 
 
 

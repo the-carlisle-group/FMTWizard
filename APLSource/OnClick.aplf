@@ -1,0 +1,8 @@
+ OnClick←{
+     ⎕←'you pressed a button'
+     db←⍵.Component
+     ⎕←⎕THIS.FormatString
+
+     0
+
+ }

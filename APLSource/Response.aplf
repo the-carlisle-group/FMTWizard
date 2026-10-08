@@ -62,6 +62,7 @@
      ⎕←j ⎕FMT x
      k←d A.GetElementById'Result'
      _←k A.SetInnerHTML,j ⎕FMT x
+     ⎕THIS.FormatString←j
 
 
      0

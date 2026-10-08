@@ -1,0 +1,22 @@
+ Reverse←{
+
+    ⍝ ⍵ is a format string
+    ⍝ Result is a namespace with format string settings
+     fs←⍵
+     s←()
+
+     s.CommaBox←'C'∊fs
+     s.LeftJustifyBox←'L'∊fs
+     s.BlankZeroBox←'B'∊fs
+     s.ZeroFill←'Z'∊fs
+
+     s.Decimals←{⊃⍎((1+⍵⍳'.')↓⍵),' 0'}fs
+     s.Columnwidth←1⊃⍴fs ⎕FMT 2
+    ⍝  ov.Scale
+
+     s
+
+
+
+
+ }
